@@ -11,7 +11,7 @@ module.exports = (function() {
     .given("$STRING", function(string, next) {
       chat.parse(string).then((_result) => {
         result = _result
-         next()
+        next()
        })
     })
     .then("$JSON", function(json, next) {
