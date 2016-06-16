@@ -3,17 +3,19 @@ let assert = require('assert')
 let English = require('yadda').localisation.English
 let chat = require('../../lib/chat')
 
+
 module.exports = (function() {
   let result
   
   return English.library()
     .given("$STRING", function(string, next) {
-       result = chat.parse(string)
-       next()
+      chat.parse(string).then((_result) => {
+        result = _result
+         next()
+       })
     })
-    .then("$JSON", function(jsonstring, next) {
-       let json = JSON.parse(jsonstring)
-       assert.equal(result, json)
+    .then("$JSON", function(json, next) {
+       assert.deepEqual(JSON.parse(result), JSON.parse(json))
        next()
     });
 })();
