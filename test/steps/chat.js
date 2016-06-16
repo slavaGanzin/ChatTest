@@ -1,19 +1,19 @@
-let assert = require('assert');
-let English = require('yadda').localisation.English;
+'use strict'
+let assert = require('assert')
+let English = require('yadda').localisation.English
+let chat = require('../../lib/chat')
 
 module.exports = (function() {
-  
-  let result;
+  let result
   
   return English.library()
     .given("$STRING", function(string, next) {
-       result = {}
-       next();
+       result = chat.parse(string)
+       next()
     })
     .then("$JSON", function(jsonstring, next) {
-      console.log(jsonstring)
        let json = JSON.parse(jsonstring)
        assert.equal(result, json)
-       next();
+       next()
     });
 })();

@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "mocha": "^2.5.3",
+    "ramda": "^0.21.0",
     "yadda": "^0.17.10"
   },
   "devDependencies": {},
