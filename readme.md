@@ -24,7 +24,7 @@ Return (string):
     "chris"
   ]
 }
-``` 
+```
 
 Input: "Good morning! (megusta) (coffee)"
 ```

@@ -1,15 +1,15 @@
-var Yadda = require('yadda');
+let Yadda = require('yadda');
 Yadda.plugins.mocha.StepLevelPlugin.init();
 
-new Yadda.FeatureFileSearch('./test/features').each(function(file) {
+new Yadda.FeatureFileSearch('./test/features').each((file) => {
 
-  featureFile(file, function(feature) {
+  featureFile(file, (feature) => {
 
-    var library = require('./test/steps/library');
-    var yadda = Yadda.createInstance(library);
+    let library = require(__dirname+'/steps/chat.js');
+    let yadda = Yadda.createInstance(library);
 
-    scenarios(feature.scenarios, function(scenario) {
-      steps(scenario.steps, function(step, done) {
+    scenarios(feature.scenarios, (scenario) => {
+      steps(scenario.steps, (step, done) => {
         yadda.run(step, done);
       });
     });
