@@ -1,4 +1,4 @@
-Please write, in your favorite programming language, JavaScript code that takes a chat message string and returns a JSON string containing information about its contents.
+Please write, in your favorite programming language function that takes a chat message string and returns a JSON string containing information about its contents.
  
 Special content to look for includes:
  
