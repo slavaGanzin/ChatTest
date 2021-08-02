@@ -1,0 +1,29 @@
+{
+  "name": "chattest",
+  "version": "1.0.0",
+  "description": "Please write, in your favorite programming language, JavaScript code that takes a chat message string and returns a JSON string containing information about its contents.",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "mocha": "^2.5.3",
+    "needle": "^1.0.0",
+    "ramda": "^0.21.0",
+    "url-regexp": "^1.0.2",
+    "yadda": "^0.17.10"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha --recursive",
+    "pretest": "npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slavaGanzin/ChatTest.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slavaGanzin/ChatTest/issues"
+  },
+  "homepage": "https://github.com/slavaGanzin/ChatTest#readme"
+}
